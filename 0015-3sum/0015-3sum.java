@@ -6,9 +6,6 @@ class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> ans = new ArrayList();
         nums = sort(nums);
-        // for (int i = 0 ; i < nums.length; i++){
-        //     System.out.println(nums[i]);
-        // }
         int a = Integer.MAX_VALUE;
         
         int i = 0;
@@ -21,10 +18,6 @@ class Solution {
                 int b = Integer.MAX_VALUE;
                 while ( j < k){
                     int sum = nums[i] + nums[j] + nums[k];
-                    // System.out.print(nums[i]);
-                    // System.out.print(nums[j]);
-                    
-                    // System.out.print(nums[k]);
                     if (nums[j] != b){
                         if(sum == 0){
                             a = nums[i];
