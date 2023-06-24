@@ -10,7 +10,6 @@ class Solution {
         int fr = 0;
         char po = 'r';
         while(fc <= lc && fr <= lr){
-            
             if (po == 'r'){
                 ans.add(matrix[r][c]);
                 c++;
