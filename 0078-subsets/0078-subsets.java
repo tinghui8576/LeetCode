@@ -7,11 +7,17 @@ class Solution {
         return ans;
     }
     public void rec(int ind, int[] nums, List<Integer> l, List<List <Integer>> ans){
-        ans.add(new ArrayList<>(l));
-        for (int i = ind; i< nums.length; i++){
-            l.add(nums[i]);
-            rec(i+1, nums, l, ans);
-            l.remove(l.size() -1);
+        
+        
+        if(ind == nums.length){
+            ans.add(new ArrayList<>(l));
+            return;
         }
+            
+        l.add(nums[ind]);
+        rec(ind+1, nums, l, ans);
+        l.remove(l.size() -1);
+        rec(ind+1, nums, l, ans);
+        
     }
 }
