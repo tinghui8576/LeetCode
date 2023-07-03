@@ -19,9 +19,8 @@ class Solution {
         
         if(root != null){
             TreeNode cur_l = root.left;
-            TreeNode cur_r = root.right;
 
-            root.left = cur_r;
+            root.left = root.right;
             root.right = cur_l;   
             
             invertTree(root.left);
