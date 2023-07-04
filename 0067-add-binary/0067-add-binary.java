@@ -15,7 +15,6 @@ class Solution {
             j -= 1;
             
             ans.insert(0, l%2);
-            //System.out.print(ans);
             l /= 2;
         }
         return ans.toString();
